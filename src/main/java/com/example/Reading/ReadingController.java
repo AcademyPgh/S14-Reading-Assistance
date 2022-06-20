@@ -32,8 +32,9 @@ public class ReadingController
             for(int i = 0; i < wordNumber; i++) {
 
                 // The modifiedWord variable is taking in each character with HTML bold tags at position i
-                modifiedWord += "<strong>" + word.charAt(i) + "</strong>";
+                modifiedWord +=  word.charAt(i);
             }
+            modifiedWord = "<strong>" + modifiedWord + "</strong";
 
             // Adds in the unbolded portion of each word onto the end of the bolded portion to make a complete word
             modifiedWord += word.substring(wordNumber);
@@ -62,7 +63,7 @@ public class ReadingController
     @CrossOrigin(origins="*")
     public String Version(){
 
-        String s = "Version Number 1";
+        String s = "Version Number 2";
         return s;
                 
     }
