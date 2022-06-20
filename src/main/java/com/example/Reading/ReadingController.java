@@ -58,6 +58,14 @@ public class ReadingController
         // This is what the fetch request is fetching as json
         return readingResponse;
     }
+    @GetMapping()
+    @CrossOrigin(origins="*")
+    public String Version(){
+
+        String s = "Version Number 1";
+        return s;
+                
+    }
 
     // The original method that was being used as an example in order to get the fetch request working before figuring out bolding text
     /* public String upperReader(String message) {
